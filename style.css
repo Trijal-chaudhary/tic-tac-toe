@@ -131,3 +131,7 @@
   background-color: #ffd60a;
   color: black;
 }
+.loser{
+  background-color: #808080;
+  opacity: 0.5;
+}

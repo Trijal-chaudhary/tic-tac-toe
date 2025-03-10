@@ -50,9 +50,16 @@ function checkWinner(){
         buttons[first].classList.add('win');
         buttons[second].classList.add('win');
         buttons[third].classList.add('win');
+        //change backbround color of losser player
+        if(buttons[first].innerHTML === 'X'){
+          document.querySelector('.js-player1').classList.add('loser');
+        }else{
+          document.querySelector('.js-player2').classList.add('loser');
+        }
         return true;
       }
     }
   }
   return false;
 };
+
