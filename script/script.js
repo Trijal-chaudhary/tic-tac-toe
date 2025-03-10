@@ -46,6 +46,10 @@ function checkWinner(){
     if(buttons[first].innerHTML != '' && buttons[second].innerHTML != '' && buttons[third].innerHTML != ''){
       if(buttons[first].innerHTML === buttons[second].innerHTML && buttons[second].innerHTML === buttons[third].innerHTML){
         console.log('mil gaya winner')
+        //add a background to winner pattern
+        buttons[first].classList.add('win');
+        buttons[second].classList.add('win');
+        buttons[third].classList.add('win');
         return true;
       }
     }
