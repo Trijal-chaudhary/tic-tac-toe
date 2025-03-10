@@ -62,4 +62,33 @@ function checkWinner(){
   }
   return false;
 };
-
+//add a event listioner to reset button
+document.querySelector('.js-reset').addEventListener('click', ()=>{
+  reset();
+})
+function reset(){
+  //set player2 true;
+  player2 = true;
+  buttons.forEach((button)=>{
+    button.innerHTML = '';
+    if (button.disabled) {
+      button.disabled = false; // Enable the button
+    }
+    if(button.classList.contains('win')){
+      button.classList.remove('win');
+    }
+  })
+  //reset the color of the players
+  const playero = document.querySelector('.js-player1');
+  const playerx = document.querySelector('.js-player2');
+  if(playero.classList.contains('loser')){
+    playero.classList.remove('loser');
+  }
+  if(playerx.classList.contains('loser')){
+    playerx.classList.remove('loser');
+  }
+  if(xTurn.classList.contains('opasity0')){
+    xTurn.classList.remove('opasity0');
+    oTurn.classList.add('opasity0');
+  }
+}
